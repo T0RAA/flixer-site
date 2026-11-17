@@ -23,7 +23,7 @@
   <h2>Data the app accesses</h2>
   <ul>
     <li><strong>Google / YouTube:</strong> with the operator's consent through Google OAuth, the app uses the scopes <code>youtube.upload</code> and <code>youtube</code> to upload videos, set thumbnails, and read basic details (channel name and handle, upload and processing status) of the operator's own channel.</li>
-    <li><strong>TikTok:</strong> with the operator's consent through TikTok Login Kit, the app uses <code>user.info.basic</code> (display name, avatar, open ID), <code>video.upload</code>, and <code>video.publish</code> to confirm the connected account and send videos to that account.</li>
+    <li><strong>TikTok:</strong> with the operator's consent through TikTok Login Kit, the app uses <code>user.info.basic</code> (display name, avatar, open ID) and <code>video.upload</code> to confirm the connected account and send videos to that account's TikTok inbox as drafts, which the operator reviews and posts in the TikTok app. During sign-in, TikTok returns a one-time code to this website's sign-in page, which passes it straight to the app on the operator's computer; the website does not store it.</li>
     <li><strong>Public videos:</strong> the app reads publicly available metadata (title, channel, view count, license) of public YouTube videos to find content that is licensed for reuse.</li>
   </ul>
 

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Flixer sign-in</title>
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header><img src="icon.png" alt=""><a href="./">FLIXER</a></header>
+  <h1>Finishing sign-in…</h1>
+  <p id="msg">Handing the sign-in back to the Flixer app on this computer.</p>
+  <script>
+    // TikTok redirects here with ?code=&state=. Pass them to the Flixer app's local listener.
+    // Nothing is stored or sent anywhere else.
+    var q = location.search;
+    if (/[?&]code=/.test(q) || /[?&]error=/.test(q)) {
+      location.replace("http://127.0.0.1:8765/callback" + q);
+    } else {
+      document.getElementById("msg").textContent = "No sign-in response found. Start sign-in from the Flixer app.";
+    }
+  </script>
+</main>
+</body>
+</html>
